@@ -30,6 +30,7 @@
     <script src="assets/jquery-3.2.1.min.js"></script>
     <!-- jQuery CDN -->
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
     <script>
         if (typeof jQuery == 'undefined') {
             document.write('<script src="assets/jquery-3.2.1.min.js"><\/script>');
@@ -39,7 +40,8 @@
         }
     </script> -->
 
-    
+    <!-- Include Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com" async></script>
 
 
 
@@ -751,7 +753,7 @@
                         <div class="main-roduct-slider-for__item">
                             <!-- <img src="assets/product1.webp" alt="" class="main-roduct-slider-for__image" /> -->
                             <img class="main-roduct-slider-for__image" 
-                                
+                                loading="lazy" 
                                 src="assets/product1-400.webp"
                                 srcset="assets/product1-360.webp 360w, 
                                         assets/product1-400.webp 400w" 
@@ -761,7 +763,7 @@
                         <div class="main-roduct-slider-for__item">
                             <!-- <img src="assets/product2.webp" alt="" class="main-roduct-slider-for__image" /> -->
                             <img class="main-roduct-slider-for__image" 
-                                
+                                loading="lazy" 
                                 src="assets/product2-400.webp"
                                 srcset="assets/product2-360.webp 360w, 
                                         assets/product2-400.webp 400w" 
@@ -771,7 +773,7 @@
                         <div class="main-roduct-slider-for__item">
                             <!-- <img src="assets/product3.webp" alt="" class="main-roduct-slider-for__image" /> -->
                             <img class="main-roduct-slider-for__image" 
-                                
+                                loading="lazy" 
                                 src="assets/product3-400.webp"
                                 srcset="assets/product3-360.webp 360w, 
                                         assets/product3-400.webp 400w" 
@@ -2040,9 +2042,7 @@
         <img src="./assets/box-inner-gift.png" alt="" />
     </div>
 
-    <!-- Include Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com" async></script>
-                                
+    
     <script>
         const template = document.getElementById('template');
         tippy('#stars', {
