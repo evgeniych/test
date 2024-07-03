@@ -730,6 +730,7 @@
                         <div class="main-roduct-slider-for__item">
                             <!-- <img src="assets/product1.webp" alt="" class="main-roduct-slider-for__image" /> -->
                             <img class="main-roduct-slider-for__image" 
+                                loading="lazy"
                                 src="assets/product1-400.webp" 
                                 srcset="assets/product1-360.webp 360w, 
                                         assets/product1-400.webp 400w" 
@@ -737,7 +738,8 @@
                         </div>
                         <div class="main-roduct-slider-for__item">
                             <!-- <img src="assets/product2.webp" alt="" class="main-roduct-slider-for__image" /> -->
-                            <img class="main-roduct-slider-for__image" 
+                            <img class="main-roduct-slider-for__image"
+                                loading="lazy"
                                 src="assets/product2-400.webp" 
                                 srcset="assets/product2-360.webp 360w, 
                                         assets/product2-400.webp 400w" 
@@ -747,6 +749,7 @@
                         <div class="main-roduct-slider-for__item">
                             <!-- <img src="assets/product3.webp" alt="" class="main-roduct-slider-for__image" /> -->
                             <img class="main-roduct-slider-for__image" 
+                                loading="lazy"
                                 src="assets/product3-400.webp" 
                                 srcset="assets/product3-360.webp 360w, 
                                         assets/product3-400.webp 400w" 
@@ -2012,12 +2015,12 @@
             push(refInDB, userData)
         });
     </script>
-    <script src="assets/jquery-3.2.1.min.js"></script>
-    <script src="assets/current-date.js"></script>
-    <script src="assets/slick.js"></script>
+    <script src="assets/jquery-3.2.1.min.js" async></script>
+    <script src="assets/current-date.js" async></script>
+    <script src="assets/slick.js" async></script>
     <!-- <script src="assets/game.js"></script> -->
-    <script src="assets/slider_scripts.js"></script>
-    <script src="assets/main.js"></script>
+    <script src="assets/slider_scripts.js" async></script>
+    <script src="assets/main.js" async></script>
     <script>
         //Скролл к блоку
         $(".go").click(function () {
