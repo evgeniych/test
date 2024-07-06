@@ -1,4 +1,12 @@
 $(document).ready(function () {
+	function updateSliderDimensions() {
+		if ($(".main-roduct-slider-for").hasClass('slick-initialized')) {
+			$(".main-roduct-slider-for").slick('setPosition');
+		}
+		if ($(".main-product-slider-nav").hasClass('slick-initialized')) {
+			$(".main-product-slider-nav").slick('setPosition');
+		}
+	}
 	$('.product-slider-nav__item').click(function (e) {
 		e.preventDefault();
 		let currentProduct = $(this);
@@ -34,42 +42,48 @@ $(document).ready(function () {
 
 	});
 
-
-
 	//Слайдер с продуктом
 	$(".main-roduct-slider-for").on("init", function (event, slick) {
 		$(this).css("visibility", "visible");
 	});
+
 	if ($(".main-roduct-slider-for").length > 0) {
-		$(".main-roduct-slider-for").slick({
-			slidesToShow: 1,
-			slidesToScroll: 1,
-			speed: 500,
-			arrows: true,
-			dots: false,
-			infinite: true,
-			fade: true,
-			swipe: true,
-			asNavFor: ".main-product-slider-nav",
+		$(".main-roduct-slider-for").imagesLoaded(function () {
+			$(".main-roduct-slider-for").slick({
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				speed: 500,
+				arrows: true,
+				dots: false,
+				infinite: true,
+				fade: true,
+				swipe: true,
+				asNavFor: ".main-product-slider-nav",
+			});
+			updateSliderDimensions();
 		});
 	}
 
 	$(".main-product-slider-nav").on("init", function (event, slick) {
 		$(this).css("visibility", "visible");
 	});
+
 	if ($(".main-product-slider-nav").length > 0) {
-		$(".main-product-slider-nav").slick({
-			slidesToShow: 3,
-			slidesToScroll: 1,
-			speed: 500,
-			arrows: false,
-			dots: false,
-			infinite: true,
-			fade: false,
-			swipe: true,
-			swipeToSlide: true,
-			focusOnSelect: true,
-			asNavFor: ".main-roduct-slider-for",
+		$(".main-roduct-slider-for").imagesLoaded(function () {
+			$(".main-product-slider-nav").slick({
+				slidesToShow: 3,
+				slidesToScroll: 1,
+				speed: 500,
+				arrows: false,
+				dots: false,
+				infinite: true,
+				fade: false,
+				swipe: true,
+				swipeToSlide: true,
+				focusOnSelect: true,
+				asNavFor: ".main-roduct-slider-for",
+			});
+			updateSliderDimensions();
 		});
 	}
 

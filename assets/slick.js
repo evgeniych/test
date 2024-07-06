@@ -516,6 +516,8 @@
                 .data('originalStyling', $(element).attr('style') || '');
         });
 
+        // style="display: flex; flex-direction: column"
+
         _.$slider.addClass('slick-slider');
 
         _.$slideTrack = (_.slideCount === 0) ?

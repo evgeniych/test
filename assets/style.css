@@ -81,6 +81,17 @@ p {
     }
 }
 
+.logo-a {
+    position: relative;
+}
+
+.logo-a::after {
+    content: '.fr';
+    position: absolute;
+    top: 7px;
+    right: -10px;
+}
+
 #header_background {
     background-color: #131921;
 }
@@ -846,6 +857,7 @@ li {
     transition: all .3s ease-in-out;
     border-radius: 100px;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .click_me_pidor:hover {

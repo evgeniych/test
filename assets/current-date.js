@@ -1,6 +1,18 @@
 // const months = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
-const months = ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'];
-
+const months = [
+    'Ocak',
+    'Şubat',
+    'Mart',
+    'Nisan',
+    'Mayıs',
+    'Haziran',
+    'Temmuz',
+    'Ağustos',
+    'Eylül',
+    'Ekim',
+    'Kasım',
+    'Aralık'
+]
 
 function generatePostDates(length) {
     const postDates = [];
@@ -25,7 +37,7 @@ for (let i = 0; i < postDates.length; i++) {
         inc = i + 1;
     }
 
-    dates.push(`${months[new Date(postDates[i]).getMonth()]}, ${days[new Date().getDate() - inc] ?? days[days.length - 1]  - inc} ${postDates[i].split('-')[0]}`)
+    dates.push(`${days[new Date().getDate() - inc] ?? days[days.length - 1] - inc} ${months[new Date(postDates[i]).getMonth()]} ${postDates[i].split('-')[0]}`)
 }
 
 currentDate.forEach((element, index) => (element.innerHTML = dates[index]));

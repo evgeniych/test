@@ -33,7 +33,8 @@ const elevenBox = document.querySelector(".eleven_box");
 const twelvBox = document.querySelector(".tvelw_box");
 
 const oneModal = document.querySelector(".click_me_pidor");
-const modalWrapp = document.querySelector(".wrapp_modal_box");
+const modalWrapp = document.querySelector(".wrapp_modal_box"); // Alert modal befoure the game
+const gameModalOverlay = document.querySelector("#game-modal-overlay"); // Overlay on the background of game's modal
 
 const endGiftAnimation = document.querySelector(".img_gift_wind");
 const blyyyy = document.querySelector(".pop");
@@ -95,13 +96,14 @@ const visiblPageTwo = () => {
 		pageThree.style.display = "none";
 		pageBox.style.display = "block";
 		modalWrapp.style.display = "block";
+		gameModalOverlay.style.display = "block";
 	}, 6000);
 };
 
 let fddfd = false;
 oneModal.addEventListener("click", function () {
 	modalWrapp.remove();
-
+	gameModalOverlay.style.display = "none";
 
 
 });

@@ -33,6 +33,7 @@ $('.boxes .box').click(function (e) {
             curentBox.find('.box__inner').css('background-image', "url('./assets/boxes/box2.png')");
             setTimeout(function () {
                 $('.two_modal_icon').fadeIn();
+                $('#game-modal-overlay').css('display', 'block');
                 $('.boxes .box').addClass('second-step');
                 $('.boxes .box.active').removeClass('second-step');
             }, 1000);
@@ -56,10 +57,12 @@ $('.boxes .box').click(function (e) {
 $('.click_me_pidor').click(function (e) {
     e.preventDefault();
     $('.two_modal_icon').fadeOut();
+    $('#game-modal-overlay').css('display', 'none');
 });
 
 $('.js-pickup').click(function (e) {
     e.preventDefault();
+    $('#game-modal-overlay').css('display', 'none');
     $('.loader-wrp').fadeIn();
     $('#game').fadeOut();
     $('#comments_display_one').hide();
